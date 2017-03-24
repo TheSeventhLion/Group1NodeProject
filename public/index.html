@@ -14,13 +14,54 @@
 
     <!-- directive goes here -->
 
-    <div class="user-profile">
+    <div ng-repeat="user in users">
+      <div class="user-profile">
 
+        <img class="user-image" ng-src="{{user.img}}">
+        <div class="text-holder">
+          <h3><b>{{user.username}}</b> - {{user.name}}</h3>
+          <p>  {{user.address.city}}</p>
+        </div>
+      </div>
+
+
+      <div class="modal-shadow">
+
+      </div>
+      <div class="data-modal">
+        <img class="user-image-modal" ng-src="{{user.img}}">
+        <div class="name-text-holder">
+          <h1><b>{{user.username}}</b> - {{user.name}}</h1>
+
+        </div>
+        <div class="address-data">
+          <p>
+            {{user.address.street}} <br>
+            {{user.address.suite}} <br>
+            {{user.address.city}} <br>
+            {{user.address.zipcode}} <br>
+
+          </p>
+
+        </div>
+        <div class="contact-data">
+          <p>{{user.phone}}</p>
+          <p>{{user.website}}</p>
+
+        </div>
+        <div class="company-data">
+          <p>
+            {{user.company.name}} <br>
+            {{user.company.catchPhrase}} <br>
+            {{user.company.bs}} <br>
+          </p>
+        </div>
+      </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
-    <!-- <script src="./groupApp.js" charset="utf-8"></script>
+    <script src="./groupApp.js" charset="utf-8"></script>
     <script src="./groupCtrl.js" charset="utf-8"></script>
-    <script src="./groupSrvc.js" charset="utf-8"></script> -->
+    <script src="./groupSrvc.js" charset="utf-8"></script>
   </body>
 </html>
