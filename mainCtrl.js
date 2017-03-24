@@ -16,4 +16,3 @@ exports.deleteData = (req, res, next) =>{
 
 
 
-
