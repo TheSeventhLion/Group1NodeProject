@@ -10,7 +10,10 @@ angular.module('groupApp').service('groupSrvc', function($http) {
   this.deleteUser = function(id) {
     return $http( {
       method: 'REMOVE',
-      url: 'http://192.168.3.129:4000/api/data/' + id
+      url: 'http://192.168.3.129:4000/api/data',
+      data: {
+        id: id
+      }
     });
   };
 

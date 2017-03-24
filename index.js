@@ -12,6 +12,7 @@ const corsOptions = {
 const app = express();
 
 app.use(express.static("public"));
+
 app.use(bodyParser.json());
 app.use(cors(corsOptions));
 
@@ -19,8 +20,10 @@ app.use(cors(corsOptions));
 
 
 app.get(`/api/data`, mainCtrl.getData);
+
 app.delete(`/api/data/`, mainCtrl.deleteData);
 // app.get(`/api/data/:name`, mainCtrl.getUserByPhone);
+
 
 
 
